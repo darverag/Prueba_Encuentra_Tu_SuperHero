@@ -1,0 +1,35 @@
+body {
+    font-family: 'BenchNine', sans-serif;
+}
+
+#small-font {
+    font-size: xx-small;
+    line-height: 90%;
+}
+
+#imagenCentral {
+    width: auto;
+    height: 500px;
+}
+
+.btn.btn-primary {
+    color: #0d6efd !important;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0.2em 1em;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #0d6efd;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.btn.btn-primary:hover {
+    background: #0d6efd;
+    color: #fff !important;
+}
+
+.text-center:hover {
+    filter: grayscale(90%);
+    transition: all 3s ease-in-out;
+}
