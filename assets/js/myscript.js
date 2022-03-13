@@ -3,9 +3,6 @@ $(document).ready(function() {
         event.preventDefault();
 
         let valueInput = $("#superHeroInput").val();
-        if (valueInput < 1 || valueInput > 731) {
-            alert("Ups, Lo sentimos!!. El número ingresado es inválido,\n¡Por favor intente nuevamente!");
-        }
 
         $.ajax({
             type: "GET",
@@ -25,7 +22,7 @@ $(document).ready(function() {
                     let alturaCM = data.appearance.height["1"];
                     let pesoL = data.appearance.weight["0"];
                     let pesoK = data.appearance.weight["1"];
-                    let alianzas = data.biography.alianses;
+                    let alias = data.biography.aliases;
                     let imagen = data.image.url
 
                     $("#superHeroInfo").append(`
@@ -45,7 +42,7 @@ $(document).ready(function() {
                                     <p class="card-text fs-6 border" id="small-font">Primera Aparición: ${primeraAparicion}</p>
                                     <p class="card-text fs-6 border" id="small-font">Altura: ${alturaP} o ${alturaCM}</p> 
                                     <p class="card-text fs-6 border" id="small-font">Peso: ${pesoL} o ${pesoK}</p>
-                                    <p class="card-text fs-6 border" id="small-font">Alianzas: ${alianzas}</p>
+                                    <p class="card-text fs-6 border" id="small-font">Alias: ${alias}</p>
                                 </div>
                             </div>
                         </div>
